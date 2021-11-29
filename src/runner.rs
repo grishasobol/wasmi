@@ -374,6 +374,7 @@ impl Interpreter {
         context: &mut FunctionContext,
         instruction: &isa::Instruction,
     ) -> Result<InstructionOutcome, TrapKind> {
+        println!("{:?}", instruction);
         match instruction {
             isa::Instruction::Unreachable => self.run_unreachable(context),
 
